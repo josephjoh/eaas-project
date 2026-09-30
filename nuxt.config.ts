@@ -35,7 +35,7 @@ export default defineNuxtConfig({
     public: {
       siteUrl: 'http://localhost:3000',
       gaId: '',
-      inquiryFormUrl: '',
+      inquiryFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdE2XYWCggnSTnCzVj_U3g5udRZOEPFDS_sza8YNJh8Ps5s5w/viewform',
       contactEmail: '',
       contactPhone: '',
     },

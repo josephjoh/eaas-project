@@ -7,13 +7,14 @@ usePageSeo({
 const { contactEmail, contactPhone } = useRuntimeConfig().public
 const { track } = useAnalytics()
 
+// Google Form의 실제 질문 구성과 맞춘다.
 const formTopics = [
   '회사 및 담당자 정보',
-  '개발팀 규모와 기술 스택',
+  '개발팀 규모',
+  '서비스 소개와 기술 스택',
   '현재 가장 큰 개발 문제',
-  '개발팀의 시간을 가장 많이 쓰는 업무',
-  'Cloud / Infrastructure 환경',
-  '희망 지원 형태와 시작 시점',
+  '희망 지원 형태',
+  '기타 질의 사항',
 ]
 
 const nextSteps = ['신청서 검토', '상담 일정 안내', '상담 및 Package 제안', '계약']

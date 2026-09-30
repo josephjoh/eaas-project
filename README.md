@@ -35,7 +35,7 @@ npm run dev            # http://localhost:3000
 |---|---|
 | `NUXT_PUBLIC_SITE_URL` | 운영 도메인. canonical, og:url, `sitemap.xml`, `robots.txt`에 사용 |
 | `NUXT_PUBLIC_GA_ID` | GA4 측정 ID. 비어 있으면 GA 미로드 |
-| `NUXT_PUBLIC_INQUIRY_FORM_URL` | Google Form 공유 URL (`.../viewform`). 비어 있으면 이메일 안내 표시 |
+| `NUXT_PUBLIC_INQUIRY_FORM_URL` | 상담 신청 Google Form URL. 기본값은 `nuxt.config.ts`에 설정됨 (다른 Form으로 바꿀 때만 지정) |
 | `NUXT_PUBLIC_CONTACT_EMAIL` | 문의 이메일 (비어 있으면 미표시) |
 | `NUXT_PUBLIC_CONTACT_PHONE` | 문의 전화 (비어 있으면 미표시) |
 
@@ -96,7 +96,7 @@ public/               favicon.svg, images/(logo.svg, og-image.png, og-image.svg)
 ## 런칭 전 체크리스트
 
 - [ ] `privacy.vue`, `terms.vue`의 `[ ]` 항목(회사명, 시행일, 보유기간, 책임자) 교체 및 법률 검토
-- [ ] Google Form 생성(스펙 14장 항목, 한 페이지 구성) → `NUXT_PUBLIC_INQUIRY_FORM_URL`
+- [x] Google Form 생성 및 연결 (`nuxt.config.ts` → `runtimeConfig.public.inquiryFormUrl`)
 - [ ] GA4 속성 생성 → `NUXT_PUBLIC_GA_ID`
 - [ ] 운영 도메인 확정 → `NUXT_PUBLIC_SITE_URL`
 - [ ] 문의 이메일/전화 → `NUXT_PUBLIC_CONTACT_*`
