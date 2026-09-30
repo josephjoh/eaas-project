@@ -1,21 +1,10 @@
 <script setup lang="ts">
 const { track } = useAnalytics()
 
-type Status = 'done' | 'review' | 'progress'
-
-// 우측 비주얼용 예시 작업 목록 (장식용)
-const boardItems: { type: string, title: string, status: string, tone: Status }[] = [
-  { type: 'Discovery', title: '레거시 API 구조 분석', status: 'Done', tone: 'done' },
-  { type: 'Bug Fix', title: '결제 모듈 간헐적 오류 수정', status: 'Deployed', tone: 'done' },
-  { type: 'Feature', title: '관리자 통계 대시보드 개발', status: 'In Review', tone: 'review' },
-  { type: 'DevOps', title: 'CI/CD 파이프라인 개선', status: 'In Progress', tone: 'progress' },
-]
-
-const statusClass: Record<Status, string> = {
-  done: 'bg-accent/15 text-accent',
-  review: 'bg-primary/25 text-[#9db8ff]',
-  progress: 'bg-white/10 text-white/70',
-}
+// 우측 비주얼: 고객사 개발팀 + EaaS Team = 확장된 Engineering Capacity
+const customerTeamFocus = ['제품 로드맵', '핵심 기능 개발', '기술 의사결정']
+const eaasTeamScope = ['유지보수', 'Bug Fix', '기능 개발', 'DevOps', 'QA', '배포 · 리포트']
+const operatingFlow = ['System Discovery', 'Engineering', 'Report']
 
 const highlights = ['System Discovery부터 시작', '유지보수 → 기능 개발까지 확장', '정기 리포트로 투명하게 공유']
 
@@ -87,48 +76,71 @@ function onCtaClick(cta: 'inquiry' | 'services') {
 
       <div
         aria-hidden="true"
-        class="hidden md:block"
+        class="hidden lg:block"
       >
         <div class="rounded-lg border border-white/10 bg-white/5 p-5 shadow-2xl shadow-black/30 backdrop-blur md:p-6">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-2">
-              <span class="size-2.5 rounded-full bg-accent" />
-              <p class="text-sm font-semibold">
-                Engineering Board
-              </p>
-            </div>
-            <span class="text-xs text-white/50">This week</span>
+          <div class="flex items-center gap-2">
+            <span class="size-2.5 rounded-full bg-accent" />
+            <p class="text-sm font-semibold">
+              Engineering Capacity
+            </p>
           </div>
-          <ul class="mt-5 space-y-3">
+
+          <div class="mt-5 rounded-md border border-white/10 bg-secondary/70 p-4">
+            <p class="text-xs font-medium text-white/50">
+              Your Team
+            </p>
+            <p class="mt-0.5 font-semibold">
+              고객사 개발팀
+            </p>
+            <ul class="mt-3 flex flex-wrap gap-1.5">
+              <li
+                v-for="item in customerTeamFocus"
+                :key="item"
+                class="rounded-full bg-white/10 px-2.5 py-1 text-xs text-white/80"
+              >
+                {{ item }}
+              </li>
+            </ul>
+          </div>
+
+          <div class="relative flex h-12 items-center justify-center">
+            <span class="absolute inset-y-0 left-1/2 w-px bg-white/15" />
+            <span class="relative flex size-8 items-center justify-center rounded-full bg-accent text-lg leading-none font-bold text-secondary">+</span>
+          </div>
+
+          <div class="rounded-md border border-primary/60 bg-primary/25 p-4">
+            <p class="text-xs font-medium text-white/60">
+              EaaS Engineering Team
+            </p>
+            <p class="mt-0.5 font-semibold">
+              개발팀의 시간을 가져가는 업무를 맡습니다
+            </p>
+            <ul class="mt-3 grid grid-cols-3 gap-1.5">
+              <li
+                v-for="item in eaasTeamScope"
+                :key="item"
+                class="rounded-md bg-white/10 px-2 py-1.5 text-center text-xs font-medium"
+              >
+                {{ item }}
+              </li>
+            </ul>
+          </div>
+
+          <ol class="mt-5 flex items-center justify-between gap-2 border-t border-white/10 pt-4 text-xs text-white/60">
             <li
-              v-for="item in boardItems"
-              :key="item.title"
-              class="flex items-center justify-between gap-4 rounded-md border border-white/10 bg-secondary/70 px-4 py-3"
+              v-for="(step, index) in operatingFlow"
+              :key="step"
+              class="flex items-center gap-2"
             >
-              <div class="min-w-0">
-                <p class="text-xs font-medium text-white/50">
-                  {{ item.type }}
-                </p>
-                <p class="mt-0.5 truncate text-sm font-medium">
-                  {{ item.title }}
-                </p>
-              </div>
-              <span :class="['shrink-0 rounded-full px-2.5 py-1 text-xs font-semibold', statusClass[item.tone]]">
-                {{ item.status }}
-              </span>
+              <span class="font-semibold text-white/85">{{ step }}</span>
+              <BaseIcon
+                v-if="index < operatingFlow.length - 1"
+                name="arrow-right"
+                class="size-3.5 text-accent"
+              />
             </li>
-          </ul>
-          <div class="mt-5 flex items-center justify-between gap-4 rounded-md bg-primary/25 px-4 py-3">
-            <div>
-              <p class="text-xs text-white/60">
-                Monthly Report
-              </p>
-              <p class="text-sm font-semibold">
-                작업 현황 · 배포 · 이슈 · 다음 작업
-              </p>
-            </div>
-            <span class="text-xs font-semibold text-accent">Sent</span>
-          </div>
+          </ol>
         </div>
       </div>
     </div>
