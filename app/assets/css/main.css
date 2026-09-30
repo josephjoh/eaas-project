@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+@import './variables.css';
+@import './reset.css';
+
+/* 페이지 공통 컨테이너: 최대 1200px, 좌우 여백은 화면 크기에 따라 조정 */
+@utility container-page {
+  width: 100%;
+  max-width: var(--layout-max-width);
+  margin-inline: auto;
+  padding-inline: var(--spacing-md);
+
+  @media (width >= 48rem) {
+    padding-inline: var(--spacing-lg);
+  }
+}
+
+/* 섹션 상하 여백 */
+@utility section-y {
+  padding-block: 4.5rem;
+
+  @media (width >= 48rem) {
+    padding-block: 5.5rem;
+  }
+
+  @media (width >= 75rem) {
+    padding-block: 7rem;
+  }
+}
