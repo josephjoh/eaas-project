@@ -14,7 +14,7 @@ import { targetProfile, techStacks } from '~/data/home'
           :title="'이런 기업을 위해\n만들었습니다'"
           description="자체 서비스를 운영하며 개발팀을 보유하고 있지만, 늘어나는 개발 수요를 내부 인력만으로 감당하기 어려운 기업에 가장 적합합니다."
         />
-        <dl class="mt-10 grid grid-cols-2 gap-4">
+        <dl class="mt-10 grid gap-4 sm:grid-cols-2">
           <div
             v-for="item in targetProfile"
             :key="item.label"
@@ -23,8 +23,9 @@ import { targetProfile, techStacks } from '~/data/home'
             <dt class="text-sm text-muted">
               {{ item.label }}
             </dt>
-            <dd class="mt-1 text-lg font-bold md:text-xl">
-              {{ item.value }}
+            <dd class="mt-1">
+              <span class="block text-lg font-bold">{{ item.value }}</span>
+              <span class="mt-1.5 block text-sm leading-relaxed text-muted">{{ item.description }}</span>
             </dd>
           </div>
         </dl>
@@ -47,7 +48,7 @@ import { targetProfile, techStacks } from '~/data/home'
           </li>
         </ul>
         <p class="mt-6 border-t border-border pt-5 text-sm leading-relaxed text-muted">
-          기술 목록은 예시이며 절대적인 지원 범위가 아닙니다. 실제 적합성은 상담 과정에서 고객사의 환경을 확인한 뒤 함께 판단합니다.
+          위 기술은 대표적인 예시입니다. 목록에 없는 기술도 상담에서 고객사의 기술 환경을 확인한 뒤 지원 가능 여부를 안내해드립니다.
         </p>
       </BaseCard>
     </div>

@@ -17,7 +17,7 @@ export const faqItems: FaqItem[] = [
   {
     question: '어떤 기술을 지원하나요?',
     answer:
-      'Java, Spring Boot, Python, Angular, React, Vue.js, RDBMS, NoSQL, Cloud, CI/CD 등 웹 서비스 환경을 중심으로 지원합니다. 다만 기술 목록이 절대적인 기준은 아니며, 상담 과정에서 고객사의 기술 환경과 적합성을 함께 판단합니다.',
+      'Java, Spring Boot, Python, Angular, React, Next.js, Vue.js, Nuxt, RDBMS, NoSQL, Cloud, CI/CD 등 웹 서비스 환경을 중심으로 지원합니다. 목록에 없는 기술도 상담에서 고객사의 기술 환경을 확인한 뒤 지원 가능 여부를 안내해드립니다.',
   },
   {
     question: '신규 기능 개발도 가능한가요?',

@@ -57,11 +57,28 @@ export const definitionPoints: TitledItem[] = [
   },
 ]
 
-export const targetProfile: { label: string, value: string }[] = [
-  { label: '회사 규모', value: '30~200명' },
-  { label: '개발자', value: '3~10명' },
-  { label: '서비스', value: '자체 서비스 운영' },
-  { label: '개발 조직', value: '기존 개발팀 보유' },
+// 스펙 9장의 수치(회사 30~200명, 개발자 3~10명)는 내부 타깃 가설이므로 화면에는 자격 조건처럼 보이지 않도록 상황으로 표현한다.
+export const targetProfile: { label: string, value: string, description: string }[] = [
+  {
+    label: '서비스',
+    value: '자체 서비스 운영',
+    description: '고객에게 직접 서비스를 제공하고 운영하는 기업',
+  },
+  {
+    label: '개발 조직',
+    value: '내부 개발팀 보유',
+    description: '개발팀은 있지만 처리할 업무가 인력보다 많은 곳',
+  },
+  {
+    label: '개발 상황',
+    value: '운영과 개발 병행',
+    description: '유지보수와 신규 개발을 동시에 감당해야 하는 곳',
+  },
+  {
+    label: '성장 단계',
+    value: '확장 준비 중',
+    description: '새 기능이나 신규 프로젝트를 계획하고 있는 곳',
+  },
 ]
 
 export const techStacks: string[] = [
@@ -70,7 +87,9 @@ export const techStacks: string[] = [
   'Python',
   'Angular',
   'React',
+  'Next.js',
   'Vue.js',
+  'Nuxt',
   'RDBMS',
   'NoSQL / 비정형 데이터',
   'Cloud',
