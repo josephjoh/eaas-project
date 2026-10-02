@@ -26,11 +26,11 @@ import { definitionPoints } from '~/data/home'
       </div>
       <ul class="grid gap-4 sm:grid-cols-2">
         <li
-          v-for="(point, index) in definitionPoints"
+          v-for="point in definitionPoints"
           :key="point.title"
         >
           <BaseCard
-            :tone="index === 0 ? 'highlight' : 'surface'"
+            tone="surface"
             class="h-full"
           >
             <h3 class="text-lg font-bold">
