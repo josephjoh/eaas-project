@@ -2,6 +2,8 @@
 
 EaaS(Engineering as a Service) 홈페이지 MVP. 스펙: [`docs/eaas_homepage_development_spec_v1.0.md`](docs/eaas_homepage_development_spec_v1.0.md)
 
+> 📚 프레임워크, 프로젝트 구조, 컴포넌트, 개발 가이드 등 상세 문서는 [`docs/`](docs/README.md)에 있다.
+
 - 정적 사이트 (Nuxt 4 SSG) — DB / Backend / 서버 없음
 - 상담 신청은 Google Form, 분석은 GA4
 - AWS Amplify Hosting으로 배포
