@@ -27,7 +27,10 @@ function onCtaClick(cta: 'inquiry' | 'services') {
 
     <div class="container-page grid items-center gap-14 py-20 md:py-24 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 lg:py-32">
       <div>
-        <BaseBadge tone="dark">
+        <BaseBadge
+          tone="dark"
+          size="md"
+        >
           Engineering as a Service
         </BaseBadge>
         <h1 class="mt-6 text-[2.125rem] leading-[1.28] font-bold tracking-tight md:text-5xl md:leading-[1.22] lg:text-[3.5rem]">
@@ -87,9 +90,9 @@ function onCtaClick(cta: 'inquiry' | 'services') {
           </div>
 
           <div class="mt-5 rounded-md border border-white/10 bg-secondary/70 p-4">
-            <p class="text-xs font-medium text-white/50">
+            <!-- <p class="text-xs font-medium text-white/50">
               Your Team
-            </p>
+            </p> -->
             <p class="mt-0.5 font-semibold">
               고객사 개발팀
             </p>
@@ -111,7 +114,7 @@ function onCtaClick(cta: 'inquiry' | 'services') {
 
           <div class="rounded-md border border-primary/60 bg-primary/25 p-4">
             <p class="text-xs font-medium text-white/60">
-              EaaS Engineering Team
+              EaaS Team
             </p>
             <p class="mt-0.5 font-semibold">
               개발팀의 시간을 가져가는 업무를 맡습니다

@@ -1,9 +1,17 @@
 <script setup lang="ts">
 withDefaults(defineProps<{
   tone?: 'primary' | 'accent' | 'neutral' | 'dark'
+  size?: 'sm' | 'md' | 'lg'
 }>(), {
   tone: 'primary',
+  size: 'sm',
 })
+
+const sizeClass = {
+  sm: 'px-3 py-1 text-xs',
+  md: 'px-4 py-1.5 text-sm',
+  lg: 'px-5 py-2 text-base',
+}
 
 const toneClass = {
   primary: 'bg-primary-soft text-primary',
@@ -14,7 +22,7 @@ const toneClass = {
 </script>
 
 <template>
-  <span :class="['inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold tracking-wide', toneClass[tone]]">
+  <span :class="['inline-flex items-center rounded-full font-semibold tracking-wide', sizeClass[size], toneClass[tone]]">
     <slot />
   </span>
 </template>
