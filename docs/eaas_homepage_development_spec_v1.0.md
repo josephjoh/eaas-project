@@ -2,6 +2,10 @@
 
 작성 기준일: 2026-09-22
 
+변경 이력:
+
+- 2026-10-02: "System Analysis"를 "System Discovery"로 통일하고, 모든 Package의 주요 범위에 System Discovery 추가 (7장, 10장, 11장)
+
 ## 1. 문서 목적
 
 본 문서는 EaaS(Engineering as a Service) 비즈니스의 초기 홈페이지 MVP를 실제 개발할 수 있도록 최근 논의한 기술 스택, 페이지 구조, 컴포넌트, 인프라, 배포 방식을 정리한 개발 스펙이다.
@@ -252,7 +256,7 @@ Inquiry CTA
 
 ### `/services/maintenance`
 
-- System Analysis
+- System Discovery
 - Bug Fix
 - Maintenance
 - Deployment
@@ -262,6 +266,7 @@ Inquiry CTA
 
 ### `/services/growth`
 
+- System Discovery
 - Maintenance
 - Feature Development
 - Refactoring
@@ -273,6 +278,7 @@ Inquiry CTA
 
 ### `/services/dedicated`
 
+- System Discovery
 - Dedicated Engineering Team
 - Maintenance
 - New Development
@@ -408,9 +414,11 @@ CTA:
 
 | Package | 목적 | 주요 범위 |
 |---|---|---|
-| Engineering Maintenance | 기존 시스템 안정적 운영 | System Analysis, Bug Fix, Maintenance, Deployment, Monthly Report |
-| Engineering Growth | 유지보수 + 지속적인 개발 | Maintenance, Feature Development, Refactoring, DevOps, QA |
-| Dedicated Engineering | 외부 Engineering Team 구성 | Dedicated Team, Maintenance, New Development, Architecture, DevOps, QA |
+| Engineering Maintenance | 기존 시스템 안정적 운영 | System Discovery, Bug Fix, Maintenance, Deployment, Monthly Report |
+| Engineering Growth | 유지보수 + 지속적인 개발 | System Discovery, Maintenance, Feature Development, Refactoring, DevOps, QA |
+| Dedicated Engineering | 외부 Engineering Team 구성 | System Discovery, Dedicated Team, Maintenance, New Development, Architecture, DevOps, QA |
+
+모든 Package는 System Discovery로 시작한다(11장 참고).
 
 추후 상세 정의가 필요한 항목:
 
@@ -429,6 +437,8 @@ CTA:
 EaaS의 핵심 차별화 요소 중 하나.
 
 계약 후 바로 요구사항만 처리하는 것이 아니라 먼저 기존 시스템을 파악한다.
+
+모든 Package의 공통 시작 단계이며, 기존 시스템 분석을 가리키는 용어는 "System Discovery"로 통일한다(한글 표기: 시스템 분석).
 
 분석 대상:
 
