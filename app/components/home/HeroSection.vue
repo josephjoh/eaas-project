@@ -4,7 +4,6 @@ const { track } = useAnalytics()
 // 우측 비주얼: 고객사 개발팀 + EaaS Team = 확장된 Engineering Capacity
 const customerTeamFocus = ['제품 로드맵', '핵심 기능 개발', '기술 의사결정']
 const eaasTeamScope = ['유지보수', 'Bug Fix', '기능 개발', 'DevOps', 'QA', '배포 · 리포트']
-const operatingFlow = ['System Discovery', 'Engineering', 'Report']
 
 const highlights = ['System Discovery부터 시작', '유지보수 → 기능 개발까지 확장', '정기 리포트로 투명하게 공유']
 
@@ -129,21 +128,6 @@ function onCtaClick(cta: 'inquiry' | 'services') {
               </li>
             </ul>
           </div>
-
-          <ol class="mt-5 flex items-center justify-between gap-2 border-t border-white/10 pt-4 text-xs text-white/60">
-            <li
-              v-for="(step, index) in operatingFlow"
-              :key="step"
-              class="flex items-center gap-2"
-            >
-              <span class="font-semibold text-white/85">{{ step }}</span>
-              <BaseIcon
-                v-if="index < operatingFlow.length - 1"
-                name="arrow-right"
-                class="size-3.5 text-accent"
-              />
-            </li>
-          </ol>
         </div>
       </div>
     </div>

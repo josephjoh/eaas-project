@@ -179,7 +179,7 @@ app.vue
 ### HeroSection 상세
 - 왼쪽: 배지, `h1` 헤드라인, 설명, CTA("EaaS 상담 신청" → `/inquiry`, "서비스 알아보기" → `/services`), 하이라이트 체크 3개
 - 오른쪽(`lg` 이상에서만 표시): **Engineering Capacity 구조도**
-  - 고객사 개발팀(`customerTeamFocus`) + EaaS Team(`eaasTeamScope`) → 흐름(`operatingFlow`)
+  - 고객사 개발팀(`customerTeamFocus`) + EaaS Team(`eaasTeamScope`)
   - 장식용이므로 `aria-hidden="true"`
 - GA: `click_hero_cta` (`cta`: `inquiry`/`services`), 상담 버튼은 `click_inquiry`(`location: hero`)도 함께 전송
 
