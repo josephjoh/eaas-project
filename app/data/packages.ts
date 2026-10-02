@@ -16,6 +16,12 @@ export interface ServicePackage {
   recommendedFor: string[]
 }
 
+/** 모든 Package의 공통 시작 단계 */
+const systemDiscoveryScope: PackageScope = {
+  name: 'System Discovery',
+  description: '작업 전 기존 시스템의 구조, 코드, 인프라를 분석해 Engineering 작업의 기준을 만듭니다.',
+}
+
 const packagesBySlug: Record<PackageSlug, ServicePackage> = {
   maintenance: {
     slug: 'maintenance',
@@ -26,7 +32,7 @@ const packagesBySlug: Record<PackageSlug, ServicePackage> = {
     summary:
       '운영 중인 서비스를 이해하고, 쌓여 있는 Bug와 유지보수 업무를 지속적으로 처리해 내부 개발팀이 핵심 업무에 집중할 수 있도록 합니다.',
     scopes: [
-      { name: 'System Analysis', description: '기존 시스템의 구조, 코드, 인프라를 분석하고 정리합니다.' },
+      systemDiscoveryScope,
       { name: 'Bug Fix', description: '보고된 Bug를 분류하고 원인 분석부터 수정까지 처리합니다.' },
       { name: 'Maintenance', description: '라이브러리·프레임워크 업데이트, 운영 이슈 대응 등 일상적인 유지보수를 수행합니다.' },
       { name: 'Deployment', description: '변경 사항을 검증된 절차에 따라 배포합니다.' },
@@ -47,6 +53,7 @@ const packagesBySlug: Record<PackageSlug, ServicePackage> = {
     summary:
       '안정적인 유지보수를 기반으로 신규 기능 개발, 리팩토링, DevOps, QA까지 함께 수행해 서비스의 개발 속도를 높입니다.',
     scopes: [
+      systemDiscoveryScope,
       { name: 'Maintenance', description: '기존 시스템의 유지보수와 Bug Fix를 지속적으로 수행합니다.' },
       { name: 'Feature Development', description: '백로그의 신규 기능을 설계하고 개발합니다.' },
       { name: 'Refactoring', description: '기술 부채를 줄이고 코드 품질을 개선합니다.' },
@@ -69,6 +76,7 @@ const packagesBySlug: Record<PackageSlug, ServicePackage> = {
     summary:
       '고객사 전담 Engineering Team을 구성해 유지보수와 신규 개발, 아키텍처와 기술 개선까지 폭넓게 수행합니다.',
     scopes: [
+      systemDiscoveryScope,
       { name: 'Dedicated Engineering Team', description: '고객사를 전담하는 Engineering Team을 구성합니다.' },
       { name: 'Maintenance', description: '운영 중인 시스템의 유지보수를 수행합니다.' },
       { name: 'New Development', description: '신규 서비스와 프로젝트 개발을 수행합니다.' },

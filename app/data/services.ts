@@ -7,9 +7,9 @@ export interface EngineeringService {
 /** What We Do: EaaS가 수행하는 Engineering 업무 */
 export const engineeringServices: EngineeringService[] = [
   {
-    name: 'System Analysis',
+    name: 'System Discovery',
     title: '시스템 분석',
-    description: 'Architecture, Repository, Database, Infrastructure를 분석해 작업의 기준을 만듭니다.',
+    description: 'Architecture, Repository, Database, Infrastructure를 먼저 분석해 작업의 기준을 만듭니다.',
   },
   {
     name: 'Bug Fix',
