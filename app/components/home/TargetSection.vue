@@ -48,7 +48,7 @@ import { targetProfile, techStacks } from '~/data/home'
           </li>
         </ul>
         <p class="mt-6 border-t border-border pt-5 text-sm leading-relaxed text-muted">
-          위 기술은 대표적인 예시입니다. 목록에 없는 기술도 상담에서 고객사의 기술 환경을 확인한 뒤 지원 가능 여부를 안내해드립니다.
+          위 기술은 대표적인 예시입니다. 목록에 없는 기술도 고객사의 기술 환경을 확인한 뒤 지원 가능 여부를 안내해드립니다.
         </p>
       </BaseCard>
     </div>

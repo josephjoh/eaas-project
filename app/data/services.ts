@@ -9,7 +9,7 @@ export const engineeringServices: EngineeringService[] = [
   {
     name: 'System Discovery',
     title: '시스템 분석',
-    description: 'Architecture, Repository, Database, Infrastructure를 먼저 분석해 작업의 기준을 만듭니다.',
+    description: 'Architecture, Repository, Database, Infrastructure 등을 먼저 분석해 작업의 기준을 만듭니다.',
   },
   {
     name: 'Bug Fix',
@@ -19,17 +19,17 @@ export const engineeringServices: EngineeringService[] = [
   {
     name: 'Maintenance',
     title: '유지보수',
-    description: '라이브러리 업데이트, 운영 이슈 대응 등 시스템이 안정적으로 동작하도록 관리합니다.',
+    description: '실시간 발생하는 운영 이슈 대응으로 시스템을 안정적으로 유지합니다.',
   },
   {
     name: 'Feature Development',
     title: '기능 개발',
-    description: '기존 코드베이스와 개발 규칙을 존중하며 신규 기능을 개발합니다.',
+    description: '기존 코드베이스와 개발 규칙을 기반으로 신규 기능을 개발합니다.',
   },
   {
     name: 'Refactoring',
     title: '리팩토링',
-    description: '기술 부채를 줄이고 변경하기 쉬운 코드 구조로 개선합니다.',
+    description: '기능은 그대로 유지하면서 복잡한 코드 구조를 정리해, 이후 변경과 개발 속도를 높입니다.',
   },
   {
     name: 'Architecture',
@@ -39,12 +39,12 @@ export const engineeringServices: EngineeringService[] = [
   {
     name: 'DevOps',
     title: '운영 자동화',
-    description: 'CI/CD, Cloud Infrastructure, Monitoring 환경을 구성하고 개선합니다.',
+    description: 'CI/CD, Cloud Infrastructure 환경을 구성하고 개선합니다.',
   },
   {
     name: 'QA',
     title: '품질 검증',
-    description: 'Code Review와 테스트로 배포 전 품질을 검증합니다.',
+    description: '개발된 사항을 먼저 개발서버에서 테스트를 거쳐서 실제 운영환경에서 문제를 최소한으로 줄입니다.',
   },
   {
     name: 'Deployment',
@@ -52,8 +52,8 @@ export const engineeringServices: EngineeringService[] = [
     description: '검증된 변경 사항을 안전하게 배포하고 결과를 확인합니다.',
   },
   {
-    name: 'Monthly Report',
-    title: '월간 리포트',
+    name: 'Report',
+    title: '리포트',
     description: '작업 현황, 배포 내역, 이슈와 기술적 발견사항을 정리해 공유합니다.',
   },
 ]

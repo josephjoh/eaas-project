@@ -32,7 +32,7 @@ export const faqItems: FaqItem[] = [
   {
     question: '유지보수 범위는 어디까지인가요?',
     answer:
-      'Bug Fix, 라이브러리·프레임워크 업데이트, 운영 이슈 대응, 배포 등이 기본 범위입니다. 구체적인 범위와 업무 Capacity는 System Discovery 결과와 선택한 Package에 따라 계약 시 함께 정합니다.',
+      'Bug Fix, 운영 이슈 대응, 배포 등이 기본 범위입니다. 구체적인 범위와 업무 Capacity는 System Discovery 결과와 선택한 Package에 따라 계약 시 함께 정합니다.',
   },
   {
     question: '장애 대응은 어떻게 하나요?',

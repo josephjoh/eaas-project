@@ -39,9 +39,9 @@ export const engagementSteps: ProcessStep[] = [
     description: '유지보수, Bug Fix, 기능 개발 등 합의된 업무를 수행합니다.',
   },
   {
-    name: 'QA / Review',
+    name: 'QA',
     title: '품질 검증',
-    description: 'Code Review와 테스트로 변경 사항을 검증합니다.',
+    description: '개발 서버에서 테스트를 거쳐 변경 사항을 검증합니다.',
   },
   {
     name: 'Deployment',
@@ -72,7 +72,6 @@ export const operationSteps: ProcessStep[] = [
   { name: 'Estimate', title: '작업 규모 산정' },
   { name: 'Approval', title: '고객 승인' },
   { name: 'Development', title: '개발' },
-  { name: 'Code Review', title: '코드 리뷰' },
   { name: 'QA', title: '품질 검증' },
   { name: 'Deploy', title: '배포' },
   { name: 'Report', title: '결과 보고' },

@@ -74,7 +74,7 @@ const portalFeatures = ['Task', 'Deployment', 'History', 'Report', 'Question']
           <SectionTitle
             eyebrow="Operation"
             title="작업 요청 처리 방식"
-            description="모든 요청은 분류와 산정, 고객 승인을 거쳐 개발되며, 코드 리뷰와 QA를 통과한 뒤 배포됩니다."
+            description="모든 요청은 분류와 산정, 고객 승인을 거쳐 개발되며, QA를 통과한 뒤 배포됩니다."
           />
           <FlowSteps
             :steps="operationSteps"

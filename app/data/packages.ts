@@ -34,9 +34,9 @@ const packagesBySlug: Record<PackageSlug, ServicePackage> = {
     scopes: [
       systemDiscoveryScope,
       { name: 'Bug Fix', description: '보고된 Bug를 분류하고 원인 분석부터 수정까지 처리합니다.' },
-      { name: 'Maintenance', description: '라이브러리·프레임워크 업데이트, 운영 이슈 대응 등 일상적인 유지보수를 수행합니다.' },
+      { name: 'Maintenance', description: '운영 중 발생하는 이슈에 대응해 시스템을 안정적으로 유지합니다.' },
       { name: 'Deployment', description: '변경 사항을 검증된 절차에 따라 배포합니다.' },
-      { name: 'Monthly Report', description: '작업 현황, 배포 내역, 이슈, 다음 작업을 월 단위로 보고합니다.' },
+      { name: 'Report', description: '작업 현황, 배포 내역, 이슈 내용 등을 보고합니다.' },
     ],
     recommendedFor: [
       '유지보수 업무 때문에 신규 개발이 계속 지연되는 팀',
@@ -56,9 +56,9 @@ const packagesBySlug: Record<PackageSlug, ServicePackage> = {
       systemDiscoveryScope,
       { name: 'Maintenance', description: '기존 시스템의 유지보수와 Bug Fix를 지속적으로 수행합니다.' },
       { name: 'Feature Development', description: '백로그의 신규 기능을 설계하고 개발합니다.' },
-      { name: 'Refactoring', description: '기술 부채를 줄이고 코드 품질을 개선합니다.' },
+      { name: 'Refactoring', description: '기능은 그대로 유지하면서 코드 구조를 정리해 개발 속도를 높입니다.' },
       { name: 'DevOps', description: 'CI/CD와 인프라 운영 환경을 개선합니다.' },
-      { name: 'QA', description: 'Code Review와 테스트로 배포 품질을 관리합니다.' },
+      { name: 'QA', description: '개발 서버에서 먼저 테스트해 운영 환경의 문제를 줄입니다.' },
       { name: 'Deployment', description: '검증된 변경 사항을 안전하게 배포합니다.' },
     ],
     recommendedFor: [

@@ -5,6 +5,8 @@
 변경 이력:
 
 - 2026-10-02: "System Analysis"를 "System Discovery"로 통일하고, 모든 Package의 주요 범위에 System Discovery 추가 (7장, 10장, 11장)
+- 2026-10-06: "Monthly Report"를 "Report"로 변경해 보고 주기를 고정하지 않음 (7장, 10장)
+- 2026-10-06: 진행 단계 "QA / Review"를 "QA"로 변경하고, 운영 프로세스에서 "Code Review" 단계 삭제 (7장, 12장)
 
 ## 1. 문서 목적
 
@@ -260,7 +262,7 @@ Inquiry CTA
 - Bug Fix
 - Maintenance
 - Deployment
-- Monthly Report
+- Report
 
 목적: 기존 시스템의 안정적인 운영과 지속적인 유지보수.
 
@@ -304,7 +306,7 @@ Inquiry CTA
    ↓
 06 Engineering
    ↓
-07 QA / Review
+07 QA
    ↓
 08 Deployment
    ↓
@@ -414,7 +416,7 @@ CTA:
 
 | Package | 목적 | 주요 범위 |
 |---|---|---|
-| Engineering Maintenance | 기존 시스템 안정적 운영 | System Discovery, Bug Fix, Maintenance, Deployment, Monthly Report |
+| Engineering Maintenance | 기존 시스템 안정적 운영 | System Discovery, Bug Fix, Maintenance, Deployment, Report |
 | Engineering Growth | 유지보수 + 지속적인 개발 | System Discovery, Maintenance, Feature Development, Refactoring, DevOps, QA |
 | Dedicated Engineering | 외부 Engineering Team 구성 | System Discovery, Dedicated Team, Maintenance, New Development, Architecture, DevOps, QA |
 
@@ -471,8 +473,6 @@ Estimate
 Approval
    ↓
 Development
-   ↓
-Code Review
    ↓
 QA
    ↓
