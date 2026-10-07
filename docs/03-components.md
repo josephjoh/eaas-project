@@ -164,7 +164,7 @@ app.vue
 
 | 컴포넌트 | id | 배경 | 데이터 | 내용 |
 |---|---|---|---|---|
-| **HeroSection** | - | 네이비 | 컴포넌트 내부 | 헤드라인, CTA 2개, 하이라이트 3개, (데스크톱 전용) Engineering Capacity 구조도 |
+| **HeroSection** | - | 네이비 | 컴포넌트 내부 | 헤드라인, CTA 2개, (데스크톱 전용) Engineering Capacity 구조도 |
 | **PainPointSection** | `pain-points` | 회색 | `home.painPoints` | 고객 고민 8개 카드 |
 | **ServiceSection** | `service` | 흰색 | `home.definitionPoints` | EaaS 정의 문구 + 핵심 가치 4개 |
 | **TargetSection** | `target` | 회색 | `home.targetProfile`, `techStacks` | 타깃 기업 프로필 + 기술 환경 칩 |
@@ -177,7 +177,7 @@ app.vue
 | **FaqSection** | `faq` | 흰색 | props `items` | FAQ 일부 + "FAQ 전체 보기" 버튼 |
 
 ### HeroSection 상세
-- 왼쪽: 배지, `h1` 헤드라인, 설명, CTA("EaaS 상담 신청" → `/inquiry`, "서비스 알아보기" → `/services`), 하이라이트 체크 3개
+- 왼쪽: 배지, `h1` 헤드라인, 설명, CTA("EaaS 상담 신청" → `/inquiry`, "서비스 알아보기" → `/services`)
 - 오른쪽(`lg` 이상에서만 표시): **Engineering Capacity 구조도**
   - 고객사 개발팀(`customerTeamFocus`) + EaaS Team(`eaasTeamScope`)
   - 장식용이므로 `aria-hidden="true"`

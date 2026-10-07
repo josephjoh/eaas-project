@@ -5,8 +5,6 @@ const { track } = useAnalytics()
 const customerTeamFocus = ['제품 로드맵', '핵심 기능 개발', '기술 의사결정']
 const eaasTeamScope = ['유지보수', 'Bug Fix', '기능 개발', 'DevOps', 'QA', '배포 · 리포트']
 
-const highlights = ['System Discovery부터 시작', '유지보수 → 기능 개발까지 확장', '정기 리포트로 투명하게 공유']
-
 function onCtaClick(cta: 'inquiry' | 'services') {
   track('click_hero_cta', { cta })
   if (cta === 'inquiry') track('click_inquiry', { location: 'hero' })
@@ -61,19 +59,6 @@ function onCtaClick(cta: 'inquiry' | 'services') {
             서비스 알아보기
           </BaseButton>
         </div>
-        <ul class="mt-10 flex flex-col gap-2.5 text-sm text-white/65 sm:flex-row sm:flex-wrap sm:gap-x-6">
-          <li
-            v-for="item in highlights"
-            :key="item"
-            class="flex items-center gap-2"
-          >
-            <BaseIcon
-              name="check"
-              class="size-4 text-accent"
-            />
-            {{ item }}
-          </li>
-        </ul>
       </div>
 
       <div
@@ -89,9 +74,6 @@ function onCtaClick(cta: 'inquiry' | 'services') {
           </div>
 
           <div class="mt-5 rounded-md border border-white/10 bg-secondary/70 p-4">
-            <!-- <p class="text-xs font-medium text-white/50">
-              Your Team
-            </p> -->
             <p class="mt-0.5 font-semibold">
               고객사 개발팀
             </p>
