@@ -25,7 +25,7 @@ export const engagementSteps: ProcessStep[] = [
   {
     name: 'System Onboarding',
     title: '온보딩',
-    description: 'Repository, Infrastructure, Database 등 업무에 필요한 접근 권한을 최소 범위로 전달받습니다.',
+    description: '저장소·인프라·데이터베이스 계정 등 필요한 정보를 전달받아, 저장소와 인프라, 데이터베이스에 최소 범위로 접근합니다.',
   },
   {
     name: 'System Discovery',
@@ -58,9 +58,8 @@ export const engagementSteps: ProcessStep[] = [
 /** 계약 이후 고객 onboarding 흐름 */
 export const onboardingSteps: ProcessStep[] = [
   { name: 'Contract', title: '계약' },
-  { name: 'Repository Access', title: '저장소 접근' },
-  { name: 'Infrastructure / Account', title: '인프라 · 계정 정보' },
-  { name: 'Database Information', title: '데이터베이스 정보' },
+  { name: 'Account Information', title: '저장소 · 인프라 · 데이터베이스 계정 등 정보 수급' },
+  { name: 'System Access', title: '저장소 · 인프라 · 데이터베이스 접근' },
   { name: 'System Discovery', title: '시스템 분석', highlight: true },
   { name: 'Engineering Start', title: '업무 시작' },
 ]
@@ -68,7 +67,7 @@ export const onboardingSteps: ProcessStep[] = [
 /** 개별 작업 요청이 처리되는 운영 흐름 */
 export const operationSteps: ProcessStep[] = [
   { name: 'Request', title: '요청 접수' },
-  { name: 'Triage', title: '분류 · 우선순위' },
+  { name: 'Triage', title: '우선순위 분류' },
   { name: 'Estimate', title: '작업 규모 산정' },
   { name: 'Approval', title: '고객 승인' },
   { name: 'Development', title: '개발' },
@@ -77,7 +76,7 @@ export const operationSteps: ProcessStep[] = [
   { name: 'Report', title: '결과 보고' },
 ]
 
-/** 이메일 리포트로 공유하는 항목 */
+/** 이메일 · Slack으로 공유하는 리포트 항목 */
 export const reportItems: string[] = [
   '작업 현황',
   'Bug Fix 내역',

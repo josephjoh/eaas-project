@@ -63,7 +63,7 @@ const portalFeatures = ['Task', 'Deployment', 'History', 'Report', 'Question']
           <SectionTitle
             eyebrow="Onboarding"
             title="계약 이후 온보딩"
-            description="업무에 필요한 접근 권한과 정보를 최소 범위로 전달받고, System Discovery를 거쳐 업무를 시작합니다."
+            description="계약 후 필요한 계정 정보를 전달받아 최소 범위로 시스템에 접근하고, System Discovery를 거쳐 업무를 시작합니다."
           />
           <FlowSteps
             :steps="onboardingSteps"
@@ -96,10 +96,10 @@ const portalFeatures = ['Task', 'Deployment', 'History', 'Report', 'Question']
               현재
             </BaseBadge>
             <h3 class="mt-4 text-xl font-bold">
-              이메일 중심 커뮤니케이션
+              이메일 · Slack 커뮤니케이션
             </h3>
             <p class="mt-2 leading-relaxed text-muted">
-              요청 접수와 진행 상황 공유는 이메일을 중심으로 이루어지며, 다음 항목을 정리해 전달합니다.
+              요청 접수와 진행 상황 공유는 이메일과 Slack을 통해 이루어지며, 다음 항목을 정리해 전달합니다.
             </p>
             <ul class="mt-6 grid grid-cols-2 gap-3">
               <li

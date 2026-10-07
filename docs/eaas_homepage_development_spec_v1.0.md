@@ -7,6 +7,8 @@
 - 2026-10-02: "System Analysis"를 "System Discovery"로 통일하고, 모든 Package의 주요 범위에 System Discovery 추가 (7장, 10장, 11장)
 - 2026-10-06: "Monthly Report"를 "Report"로 변경해 보고 주기를 고정하지 않음 (7장, 10장)
 - 2026-10-06: 진행 단계 "QA / Review"를 "QA"로 변경하고, 운영 프로세스에서 "Code Review" 단계 삭제 (7장, 12장)
+- 2026-10-07: 고객 커뮤니케이션 수단에 Slack 추가 (12장, 13장)
+- 2026-10-07: 고객 onboarding을 "계약 → 계정 등 정보 수급 → 시스템 접근 → System Discovery → 업무 시작" 순서로 변경 (12장)
 
 ## 1. 문서 목적
 
@@ -486,18 +488,16 @@ Report
 ```text
 Contract
    ↓
-Repository Access
+Account Information (저장소 · 인프라 · 데이터베이스 계정 등 정보 수급)
    ↓
-Infrastructure / Account Information
-   ↓
-Database Information
+System Access (저장소 · 인프라 · 데이터베이스 접근)
    ↓
 System Discovery
    ↓
 Engineering Start
 ```
 
-초기에는 이메일을 주요 커뮤니케이션 수단으로 사용한다.
+초기에는 이메일과 Slack을 주요 커뮤니케이션 수단으로 사용한다.
 
 ## 13. 고객 커뮤니케이션
 
@@ -506,7 +506,7 @@ Engineering Start
 ```text
 Customer
    ↓
-Email
+Email / Slack
    ↓
 Engineering Team
 ```
@@ -520,12 +520,12 @@ Engineering Team
 - 다음 작업
 - 기술적 발견사항
 
-등을 이메일로 전달한다.
+등을 이메일과 Slack으로 전달한다.
 
 향후 Customer Portal로 전환:
 
 ```text
-Email
+Email / Slack
   ↓
 Customer Portal
   ↓
