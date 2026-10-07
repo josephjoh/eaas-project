@@ -96,7 +96,7 @@ eaas-project/
 
 | 파일 | export | 사용처 |
 |---|---|---|
-| `site.ts` | `siteConfig`(이름·설명), `mainNav`, `legalNav` | Header, Footer, 메인 SEO |
+| `site.ts` | `siteConfig`(이름·설명), `companyInfo`(상호·사업자등록번호), `mainNav`, `legalNav` | Header, Footer, 메인 SEO |
 | `services.ts` | `engineeringServices` (What We Do 10개) | WhatWeDoSection |
 | `packages.ts` | `servicePackages`, `getPackage(slug)`, `packageConsultationItems`, 타입 `ServicePackage`·`PackageSlug` | PackageSection, PackageCard, 서비스 페이지, Footer |
 | `process.ts` | `engagementSteps`(9단계), `onboardingSteps`, `operationSteps`, `reportItems` | ProcessSection, `/process` |
@@ -169,7 +169,7 @@ nuxt.config.ts runtimeConfig.public  ◀── NUXT_PUBLIC_* (빌드 시점)
 | `NUXT_PUBLIC_SITE_URL` | `http://localhost:3000` | canonical, og:url/og:image, sitemap, robots |
 | `NUXT_PUBLIC_GA_ID` | (없음) | GA4 로드 여부 |
 | `NUXT_PUBLIC_INQUIRY_FORM_URL` | 연결된 Google Form URL | InquiryForm |
-| `NUXT_PUBLIC_CONTACT_EMAIL` | (없음) | Footer, CtaBanner, inquiry 페이지 (비어 있으면 숨김) |
+| `NUXT_PUBLIC_CONTACT_EMAIL` | `soluconlab@gmail.com` | Footer, CtaBanner, inquiry 페이지 (비어 있으면 숨김) |
 | `NUXT_PUBLIC_CONTACT_PHONE` | (없음) | Footer, inquiry 페이지 (비어 있으면 숨김) |
 
 > 빈 값으로 설정한 환경변수도 기본값을 덮어쓴다. 기본값을 쓰려면 변수를 **아예 정의하지 않는다.**

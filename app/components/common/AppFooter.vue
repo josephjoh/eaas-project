@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { servicePackages } from '~/data/packages'
-import { legalNav, mainNav, siteConfig } from '~/data/site'
+import { companyInfo, legalNav, mainNav, siteConfig } from '~/data/site'
 
 const { contactEmail, contactPhone } = useRuntimeConfig().public
 const { track } = useAnalytics()
@@ -130,7 +130,17 @@ const phoneHref = computed(() => `tel:${contactPhone.replace(/[^0-9+]/g, '')}`)
 
     <div class="border-t border-border">
       <div class="container-page flex flex-col gap-3 py-6 text-sm text-muted md:flex-row md:items-center md:justify-between">
-        <p>© {{ year }} {{ siteConfig.name }}. All rights reserved.</p>
+        <div class="space-y-1">
+          <p>
+            {{ companyInfo.name }}
+            <span
+              class="mx-2 text-border"
+              aria-hidden="true"
+            >|</span>
+            사업자등록번호 {{ companyInfo.businessNumber }}
+          </p>
+          <p>© {{ year }} {{ companyInfo.name }}. All rights reserved.</p>
+        </div>
         <ul class="flex gap-5">
           <li
             v-for="(item, index) in legalNav"

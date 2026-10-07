@@ -38,7 +38,7 @@ npm run dev            # http://localhost:3000
 | `NUXT_PUBLIC_SITE_URL` | 운영 도메인. canonical, og:url, `sitemap.xml`, `robots.txt`에 사용 |
 | `NUXT_PUBLIC_GA_ID` | GA4 측정 ID. 비어 있으면 GA 미로드 |
 | `NUXT_PUBLIC_INQUIRY_FORM_URL` | 상담 신청 Google Form URL. 기본값은 `nuxt.config.ts`에 설정됨 (다른 Form으로 바꿀 때만 지정) |
-| `NUXT_PUBLIC_CONTACT_EMAIL` | 문의 이메일 (비어 있으면 미표시) |
+| `NUXT_PUBLIC_CONTACT_EMAIL` | 문의 이메일. 기본값(`soluconlab@gmail.com`)은 `nuxt.config.ts`에 설정됨 (바꿀 때만 지정) |
 | `NUXT_PUBLIC_CONTACT_PHONE` | 문의 전화 (비어 있으면 미표시) |
 
 ## 프로젝트 구조
@@ -97,10 +97,11 @@ public/               favicon.svg, images/(logo.svg, og-image.png, og-image.svg)
 
 ## 런칭 전 체크리스트
 
-- [ ] `privacy.vue`, `terms.vue`의 `[ ]` 항목(회사명, 시행일, 보유기간, 책임자) 교체 및 법률 검토
+- [x] 회사 정보 반영 (주식회사 솔루콘, 사업자등록번호, 문의 이메일 → `app/data/site.ts`, `nuxt.config.ts`)
+- [ ] `privacy.vue`, `terms.vue`의 남은 `[ ]` 항목(개인정보 보호책임자 성명) 교체 및 법률 검토
 - [x] Google Form 생성 및 연결 (`nuxt.config.ts` → `runtimeConfig.public.inquiryFormUrl`)
 - [ ] GA4 속성 생성 → `NUXT_PUBLIC_GA_ID`
 - [ ] 운영 도메인 확정 → `NUXT_PUBLIC_SITE_URL`
-- [ ] 문의 이메일/전화 → `NUXT_PUBLIC_CONTACT_*`
+- [ ] 문의 전화(필요 시) → `NUXT_PUBLIC_CONTACT_PHONE`
 - [ ] 메인 페이지 실제 콘텐츠 최종 확정 (`app/data/*.ts`)
 - [ ] 해상도별 확인 (375 / 390 / 430 / 768 / 1024 / 1280 / 1440px), Lighthouse

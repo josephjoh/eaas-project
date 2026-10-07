@@ -34,6 +34,7 @@ app.vue
 하단 푸터. 브랜드 소개, 서비스 링크, 안내 링크, 문의처, 법적 고지 링크를 보여준다.
 - props 없음
 - 이메일·전화는 `runtimeConfig.public.contactEmail/contactPhone`이 있을 때만 표시한다.
+- 하단에 사업자 정보(`companyInfo`: 상호, 사업자등록번호)와 저작권 표기를 보여준다.
 - GA: `click_service`, `click_inquiry`, `click_email`, `click_phone` (`location: footer…`)
 
 ---

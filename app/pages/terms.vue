@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// TODO(런칭 전): [ ] 표시 항목을 실제 정보로 교체하고 법률 검토를 받는다.
+// TODO(런칭 전): 법률 검토를 받는다.
 usePageSeo({
   title: '이용약관',
   description: 'EaaS 홈페이지 이용에 관한 약관 및 법적 고지입니다.',
@@ -9,11 +9,11 @@ usePageSeo({
 <template>
   <LegalDocument
     title="이용약관"
-    effective-date="[YYYY-MM-DD]"
+    effective-date="2026-10-07"
   >
     <h2>제1조 (목적)</h2>
     <p>
-      이 약관은 [회사명](이하 "회사")이 운영하는 EaaS 홈페이지(이하 "홈페이지")의 이용 조건과 절차,
+      이 약관은 주식회사 솔루콘(이하 "회사")이 운영하는 EaaS 홈페이지(이하 "홈페이지")의 이용 조건과 절차,
       회사와 이용자의 권리·의무를 정하는 것을 목적으로 합니다.
     </p>
 
