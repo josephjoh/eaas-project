@@ -2,6 +2,7 @@
 usePageSeo({
   title: '상담 신청',
   description: '회사와 개발 환경, 현재 겪고 있는 개발 문제를 알려주세요. 적합한 지원 방식과 Package를 제안해드립니다.',
+  breadcrumbs: [{ name: '상담 신청', path: '/inquiry' }],
 })
 
 const { contactEmail, contactPhone } = useRuntimeConfig().public

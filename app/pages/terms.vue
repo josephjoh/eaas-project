@@ -3,6 +3,7 @@
 usePageSeo({
   title: '이용약관',
   description: 'EaaS 홈페이지 이용에 관한 약관 및 법적 고지입니다.',
+  breadcrumbs: [{ name: '이용약관', path: '/terms' }],
 })
 </script>
 

@@ -38,6 +38,8 @@ export default defineNuxtConfig({
       inquiryFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdE2XYWCggnSTnCzVj_U3g5udRZOEPFDS_sza8YNJh8Ps5s5w/viewform',
       contactEmail: 'soluconlab@gmail.com',
       contactPhone: '',
+      googleSiteVerification: '',
+      naverSiteVerification: '',
     },
   },
 
@@ -46,7 +48,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/sitemap.xml', '/robots.txt'],
+      routes: ['/', '/sitemap.xml', '/robots.txt', '/llms.txt'],
     },
   },
 

@@ -4,23 +4,16 @@ import { faqItems } from '~/data/faq'
 usePageSeo({
   title: '자주 묻는 질문',
   description: 'EaaS의 서비스 범위, 기술 지원, 계약, 보안과 접근 권한 관리 등 자주 묻는 질문에 답변합니다.',
+  breadcrumbs: [{ name: '자주 묻는 질문', path: '/faq' }],
 })
 
-useHead({
-  script: [
-    {
-      type: 'application/ld+json',
-      innerHTML: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        'mainEntity': faqItems.map(item => ({
-          '@type': 'Question',
-          'name': item.question,
-          'acceptedAnswer': { '@type': 'Answer', 'text': item.answer },
-        })),
-      }),
-    },
-  ],
+useJsonLd({
+  '@type': 'FAQPage',
+  'mainEntity': faqItems.map(item => ({
+    '@type': 'Question',
+    'name': item.question,
+    'acceptedAnswer': { '@type': 'Answer', 'text': item.answer },
+  })),
 })
 </script>
 

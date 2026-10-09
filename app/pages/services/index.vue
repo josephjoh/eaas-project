@@ -5,6 +5,7 @@ usePageSeo({
   title: '서비스',
   description:
     'Engineering Maintenance, Engineering Growth, Dedicated Engineering. 유지보수부터 전담 Engineering Team까지 고객사 상황에 맞는 Package를 선택하세요.',
+  breadcrumbs: [{ name: '서비스', path: '/services' }],
 })
 </script>
 

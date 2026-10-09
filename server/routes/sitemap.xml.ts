@@ -18,11 +18,14 @@ const pages: { path: string, priority: string }[] = [
 
 export default defineEventHandler((event) => {
   const siteUrl = useRuntimeConfig().public.siteUrl.replace(/\/+$/, '')
+  // 정적 사이트이므로 빌드(배포) 날짜를 lastmod로 사용한다.
+  const lastmod = new Date().toISOString().slice(0, 10)
 
   const urls = pages
     .map(page => [
       '  <url>',
       `    <loc>${siteUrl}${page.path}</loc>`,
+      `    <lastmod>${lastmod}</lastmod>`,
       `    <priority>${page.priority}</priority>`,
       '  </url>',
     ].join('\n'))

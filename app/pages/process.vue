@@ -5,6 +5,7 @@ usePageSeo({
   title: '진행 방식',
   description:
     '상담 신청부터 계약, System Discovery, Engineering, QA, 배포, 리포트까지. EaaS가 일하는 방식을 소개합니다.',
+  breadcrumbs: [{ name: '진행 방식', path: '/process' }],
 })
 
 const portalFeatures = ['Task', 'Deployment', 'History', 'Report', 'Question']

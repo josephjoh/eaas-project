@@ -3,6 +3,7 @@
 usePageSeo({
   title: '개인정보처리방침',
   description: 'EaaS 홈페이지의 개인정보 수집·이용 및 처리에 관한 방침입니다.',
+  breadcrumbs: [{ name: '개인정보처리방침', path: '/privacy' }],
 })
 </script>
 
