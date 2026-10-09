@@ -33,7 +33,7 @@ export default defineNuxtConfig({
   // 빌드(generate) 시점의 NUXT_PUBLIC_* 환경변수로 덮어쓴다. Secret은 절대 public에 두지 않는다.
   runtimeConfig: {
     public: {
-      siteUrl: 'http://localhost:3000',
+      siteUrl: 'https://www.soluconlab.com',
       gaId: '',
       inquiryFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdE2XYWCggnSTnCzVj_U3g5udRZOEPFDS_sza8YNJh8Ps5s5w/viewform',
       contactEmail: 'soluconlab@gmail.com',
